@@ -2,16 +2,10 @@
 
 // escribe la función sum acá
 
-function sum(arraySum) {
-    if (arraySum.length === 0){
-        return 0
-    }
-    let adition = arraySum.length
-    for (let i = arraySum.length ; i = 1; i--){
-        const number = 0
-                if (adition > number){
-         adition = number
-        }
+function sum(array) {
+    let number = 0
+    for (let i = 0 ; i < array.length ; i++){
+        number += array[i]
     }
     return number
 }
