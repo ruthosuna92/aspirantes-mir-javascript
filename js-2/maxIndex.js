@@ -2,18 +2,17 @@
 Si el arreglo está vacío debe retornar -1.*/
 
 // escribe la función maxIndex acá
-function maxIndex(array) {
-    if (array.length === 0){
-        return -1
+function maxIndex(array){
+    let maxNumber = 0
+    for ( let i = 0 ; i < array.length ; i++){
+      const number = array[i]
+      if (maxNumber < number) {
+        maxNumber = number
+      } 
     }
-    let maxIndexNumber = (array.length - 1)
-    for (let i = 0 ; i <= array.length; i++){
-            if (maxIndexNumber < array[i]){
-         maxIndexNumber = array[i]
-        }
-    }
-    return indexOf(maxIndexNumber)
-}
+    return array.indexOf(maxNumber)
+  }
+  
 
 console.log(maxIndex([1, 3, 2])) // 1
 console.log(maxIndex([10, 9, 8, 7, 6, 5, 4])) // 0
